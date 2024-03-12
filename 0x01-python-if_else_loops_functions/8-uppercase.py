@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-def islower(c):
-    if c >= 'a' and c <= 'z':
-        return True
-    else:
-        return False
+def uppercase(s):
+    for char in s:
+        if ord('a') <= ord(char) <= ord('z'):
+            uppercase_char = chr(ord(char) - 32)
+        else:
+            uppercase_char = char
+        print("{}".format(uppercase_char), end='')
+    print()
+uppercase("Hello, world!")
