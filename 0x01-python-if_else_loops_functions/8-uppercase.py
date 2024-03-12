@@ -7,4 +7,3 @@ def uppercase(s):
             uppercase_char = char
         print("{}".format(uppercase_char), end='')
     print()
-uppercase("Hello, world!")
