@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 import string
-print(__import__('string').ascii_uppercase)
+getattr(string, 'ascii_uppercase').__doc__ == print.__doc__ or print(string.ascii_uppercase)
