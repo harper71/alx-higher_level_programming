@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import string
-print(*list(string.ascii_uppercase), sep="")
+print(*(chr(i) for i in range(65, 91)), sep="")
