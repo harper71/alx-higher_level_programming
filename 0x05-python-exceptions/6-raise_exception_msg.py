@@ -6,5 +6,4 @@ def raise_exception_msg(message=""):
     Raises:
         NameError: The custom exception with the provided message.
     """
-
     raise NameError(message)

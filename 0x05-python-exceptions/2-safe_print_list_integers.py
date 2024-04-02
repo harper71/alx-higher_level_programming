@@ -4,7 +4,6 @@ def safe_print_list_integers(my_list=[], x=0):
        my_list (list, optional): The list to be printed. Defaults to [].
        x (int, optional): The number of elements to access in my_list.
            Defaults to 0 (prints all elements).
-
    Raises:
        IndexError: If x is greater than the length of the list.
    """
@@ -17,7 +16,5 @@ def safe_print_list_integers(my_list=[], x=0):
                 count += 1
     except IndexError:
         raise
-
     print()
-
     return count

@@ -2,7 +2,14 @@ import sys
 
 
 def safe_print_integer_err(value):
+    """
 
+    Args:
+        value (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     try:
         print("{:d}".format(value))
         return True
