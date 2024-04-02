@@ -3,6 +3,7 @@ if [ -z "$PYFILE" ]; then
    echo "Error: PYFILE environment variable is not set."
    exit 1
 fi
+PYFILE=main.py
 
 python3 -m compileall "$PYFILE" > /dev/null 2>&1
 if [ -f "$PYFILEc" ]; then
