@@ -2,6 +2,7 @@
 
 """This is a square module that creates a square class."""
 
+
 class Square:
     """A class representing a Square.
 

@@ -2,10 +2,11 @@
 
 """This is a square module that creates a square class."""
 
+
 class Square:
     """A class representing a Square.
 
-        This class represents a square and provides methods to interact with it,
+        This class represents a square and provides methods
         such as initializing the square with a given size.
 
         Attributes:
