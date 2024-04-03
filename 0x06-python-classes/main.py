@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is a square module that creates a square class."""
+
 
 Square = __import__('0-square').Square
 
