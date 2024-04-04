@@ -1,23 +1,38 @@
 #!/usr/bin/python3
 
+"""Represents a square with size and position."""
+
 
 class Square:
     """a square class
     """
-
     def __init__(self, size=0, position=(0, 0)):
-
+        """Initializes the square with optional size and position."""
         self.__size = size
         self.__position = position
 
     def __ValidateSize(self, size):
+        """Validates the size of the square.
+
+        Raises:
+            ValueError: If the size is less than or equal to 0.
+            TypeError: If the size is not an integer.
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
 
     def __validatePosition(self, postion):
+        """validates position to an int
 
+        Args:
+            postion (int): returns a integer
+
+        Raises:
+            TypeError: position must be a tuple of 2 positive integers
+            TypeError: position must be a tuple of 2 positive integers
+        """
         if not isinstance(postion, tuple) or len(postion) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not all(isinstance(x, int) and x >= 0 for x in postion):
@@ -25,6 +40,7 @@ class Square:
 
     @property
     def size(self):
+        """Retrieves the size of the square."""
         return self.__size
 
     @size.setter
@@ -41,11 +57,16 @@ class Square:
 
     @property
     def position(self):
+        """Retrieves the position of the square."""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """setter for square
 
+        Args:
+            value (int): postion of the square
+        """
         self.__validatePosition(value)
         self.__position = value
 
@@ -56,7 +77,7 @@ class Square:
 
     def my_print(self):
         """Prints a square using '#' characters based on the size.
-
+            and positions 
             prints the square pattern.
         """
 
