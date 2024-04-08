@@ -4,6 +4,7 @@
 
 
 class Rectangle:
+    """ a rectangle shape"""
     def __init__(self, width=0, height=0):
 
         """a rectangle that creates a rectangle
