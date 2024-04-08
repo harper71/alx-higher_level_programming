@@ -82,14 +82,20 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if type(rect_1) not in [Rectangle]:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        
+
         if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+
+        return cls(size, size)
