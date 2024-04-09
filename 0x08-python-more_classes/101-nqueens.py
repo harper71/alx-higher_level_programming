@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+""" an N queen game"""
 
 
 def is_safe(board, row, col, n):
@@ -46,6 +47,8 @@ def print_solution(solution):
 
 
 if __name__ == "__main__":
+    """runs the game
+    """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
