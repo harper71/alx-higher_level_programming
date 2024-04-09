@@ -1,0 +1,12 @@
+>>> import doctest
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+    >>> say_my_name("azuka", "amadi")
+    My name is azuka amadi
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+    >>> say_my_name("White", 13)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
