@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """changes the first and last names"""
 
+
 def say_my_name(first_name, last_name=""):
-    """prints the  fisrt and last names 
+    """prints the  fisrt and last names
 
     Args:
         first_name (str): first name
