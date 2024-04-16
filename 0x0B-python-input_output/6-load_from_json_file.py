@@ -1,4 +1,4 @@
-#!/usr/bib/python3
+#!/usr/bin/python3
 """loads strings from json"""
 import json
 
@@ -14,4 +14,5 @@ def load_from_json_file(filename):
     """
     with open(filename, 'r') as file:
         data = file.read()
-        return json.loads(data)
+        new_obj = json.loads(data)
+        return new_obj
