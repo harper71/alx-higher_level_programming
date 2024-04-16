@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """returns a python string"""
+import json
 
 
 def from_json_string(my_str):

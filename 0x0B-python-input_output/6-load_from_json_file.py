@@ -1,6 +1,6 @@
 #!/usr/bib/python3
-import json
 """loads strings from json"""
+import json
 
 
 def load_from_json_file(filename):
