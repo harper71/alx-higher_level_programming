@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """class of a base"""
 import json
-import os
 
 
 class Base:
@@ -61,12 +60,18 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ loads instances from file"""
-        filename = cls.__name__ + ".json"
-        with open(filename, "r") as file:
-            json_string = file.read()
-            dictionaries = cls.from_json_string(json_string)
-            dict_1 = cls.create(**dictionary)
-            instances = [dict_1 for dictionary in dictionaries]
-            return instances
-        return []
+        """loads json data to file
+        """
+        file_name = "{}.json".format(cls.__name__)
+
+        try:
+            with open(file_name, "r") as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+
+                list_instances = []
+
+                for d in list_dicts:
+                        list_instances.append(cls.create(**d))
+                return list_instances
+        except FileNotFoundError:
+            return []
