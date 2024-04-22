@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 from models.rectangle import Rectangle
 """This is a square module that creates a square class."""
 
