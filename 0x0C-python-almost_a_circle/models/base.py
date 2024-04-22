@@ -68,5 +68,7 @@ class Base:
         with open(filename, "r") as file:
             json_string = file.read()
             dictionaries = cls.from_json_string(json_string)
-            instances = [cls.create(**dictionary) for dictionary in dictionaries]
+            for dictionary in dictionaries:
+                instances = cls.create(**dictionary)
             return instances
+

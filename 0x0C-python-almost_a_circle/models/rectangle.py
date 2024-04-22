@@ -21,9 +21,9 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if type(value) not in [int]:
+        if type(value) != int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
@@ -33,9 +33,9 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if type(value) not in [int]:
+        if type(value) != int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -45,23 +45,23 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if type(value) not in [int]:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value <= 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
     def y(self):
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
-        if type(value) not in [int]:
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__x = value
+        self.__y = value
 
     def area(self):
         """calculate the area of a rectangle
@@ -79,8 +79,9 @@ class Rectangle(Base):
                 print()
             for _ in range(self.__height):
                 print(" " * self.__x + "#" * self.__width)
-        for i in range(self.__height):
-            print("#" * self.__width)
+        else:
+            for i in range(self.__height):
+                print("#" * self.__width)
 
     def __str__(self):
         return f"[Rectange] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
@@ -118,4 +119,10 @@ class Rectangle(Base):
         Returns:
             dictionary: returns a dictionary of all rectangle elements
         """
-        return self.__dict__
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+            }
