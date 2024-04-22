@@ -31,7 +31,9 @@ class Base:
 
         filename = cls.__name__ + ".json"
         with open(filename, "w") as file:
-            json_strings = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+            json_strings = cls.to_json_string(
+                [obj.to_dictionary() for obj in list_objs]
+            )
             file.write(json_strings)
 
     @staticmethod
@@ -64,7 +66,7 @@ class Base:
         with open(filename, "r") as file:
             json_string = file.read()
             dictionaries = cls.from_json_string(json_string)
-            instances = [cls.create(**dictionary) for dictionary in dictionaries]
+            dict_1 = cls.create(**dictionary)
+            instances = [dict_1 for dictionary in dictionaries]
             return instances
-        
         return []
