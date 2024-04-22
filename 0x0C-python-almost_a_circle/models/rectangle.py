@@ -3,7 +3,6 @@ from models.base import Base
 """creates a class of a rectangle"""
 
 
-
 class Rectangle(Base):
     """class of a rectangle
     """
@@ -16,7 +15,7 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-    def  height(self):
+    def height(self):
         return self.__height
 
     @height.setter
@@ -84,7 +83,8 @@ class Rectangle(Base):
                 print("#" * self.__width)
 
     def __str__(self):
-        return f"[Rectange] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectange] ({self.id}) {self.__x}/{self.__y} - " \
+        f"{self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """this uses the args and kwargs
