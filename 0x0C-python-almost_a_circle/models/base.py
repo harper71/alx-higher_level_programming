@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class of a base"""
 import json
+import os
 
 
 class Base:
@@ -30,8 +31,9 @@ class Base:
 
         filename = cls.__name__ + ".json"
         with open(filename, "w") as file:
-            json_strings = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
-            file.write(json_strings)
+            for obj in list_objs:
+                json_strings = cls.to_json_string(obj.to_dictionary())
+                file.write(json_strings)
 
     @staticmethod
     def from_json_string(json_string):
@@ -63,7 +65,8 @@ class Base:
         with open(filename, "r") as file:
             json_string = file.read()
             dictionaries = cls.from_json_string(json_string)
-                instances = [cls.create(**dictionary) for dictionary in dictionaries]
+            for dictionary in dictionaries:
+                instances = cls.create(**dictionary)
             return instances
         
         return []
