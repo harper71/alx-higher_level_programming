@@ -62,13 +62,12 @@ class Base:
     def load_from_file(cls):
         """ loads instances from file"""
         filename = cls.__name__ + ".json"
-        if not os.path.exists(filename):
-            return []
-        
-        with open(filename, "r") as file:
-            json_string = file.read()
-            dictionaries = cls.from_json_string(json_string)
-            for dictionary in dictionaries:
-                instances = cls.create(**dictionary)
+        try:
+            with open(filename, "r") as file:
+                json_string = file.read()
+                dictionaries = cls.from_json_string(json_string)
+                for dictionary in dictionaries:
+                    instances = cls.create(**dictionary)
             return instances
-
+        except FileNotFoundError:
+            return []
