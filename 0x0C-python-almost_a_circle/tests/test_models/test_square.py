@@ -1,7 +1,11 @@
+#!/usr/bin/python3
+"""Defines unittests for base.py."""
 import unittest
 from models.square import Square
 
+
 class TestSquare(unittest.TestCase):
+    """unittest of square"""
     def test_init(self):
         with self.assertRaises(TypeError):
             square = Square('invalid')

@@ -1,7 +1,12 @@
+#!/usr/bin/python3
+"""Defines unittests for rectanglee.py."""
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
+
 
 class TestRectangle(unittest.TestCase):
+    """unittest for rectangle"""
     def test_init(self):
         with self.assertRaises(TypeError):
             rectangle = Rectangle('invalid', 10, 2, 3, 1)

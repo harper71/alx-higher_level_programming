@@ -1,7 +1,11 @@
+#!/usr/bin/python3
+"""Defines unittests for base.py."""
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
+    """unittests for base"""
     def test_init(self):
         obj1 = Base()
         obj2 = Base()
