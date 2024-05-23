@@ -1,2 +1,2 @@
 -- shows the discription of full table
-DESCRIBE TABLES;
+DESCRIBE first_table;
