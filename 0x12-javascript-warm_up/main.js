@@ -1,4 +1,5 @@
 #!/usr/bin/node
-myVar = 89;
-require('./100-let_me_const');
-console.log(myVar);
+const increase = require('./102-add_me_maybe').increase;
+increase(4, function (increment) {
+  console.log('New value: ' + increment);
+});
