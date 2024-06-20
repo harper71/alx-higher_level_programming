@@ -4,4 +4,4 @@ function increase (number, theFunction) {
   theFunction(increment);
 }
 
-module.exports = { increase };
+module.exports.increase = increase;

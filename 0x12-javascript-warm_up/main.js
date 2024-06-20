@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const increase = require('./102-add_me_maybe').increase;
-increase(4, function (increment) {
-  console.log('New value: ' + increment);
+const iter = require('./101-call_me_moby').iter;
+iter(3, function () {
+  console.log('C is fun');
 });

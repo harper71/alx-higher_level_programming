@@ -5,4 +5,4 @@ function iter (x, theFunction) {
   }
 }
 
-module.exports = { iter };
+module.exports.iter = iter;
