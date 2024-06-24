@@ -8,6 +8,7 @@ from "N" in a database
 import sys
 import MySQLdb
 
+
 if __name__ == "__main__":
     db_user = sys.argv[1]
     db_password = sys.argv[2]

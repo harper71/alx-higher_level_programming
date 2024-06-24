@@ -19,7 +19,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name\
+                    FROM cities JOIN states ON cities.state_id = states.id;")
 
     rows = cursor.fetchall()
 
