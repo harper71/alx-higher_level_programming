@@ -1,3 +1,3 @@
 #!/bin/bash
 # uses the get command
-curl -X GET "$1"
+response="curl -X GET '$1'" && echo "$response"
