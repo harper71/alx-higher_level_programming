@@ -1,3 +1,3 @@
 #!/bin/bash
-# uses the get command
+# uses the DELETE command
 curl -sX DELETE "$1"
