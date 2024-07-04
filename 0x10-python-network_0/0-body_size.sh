@@ -11,4 +11,4 @@ URL="$1"
 
 response=$(curl -s -o /dev/null -w '%{size_download}' "$URL")
 
-echo "Size of the response body: $response bytes"
+echo "$response"
