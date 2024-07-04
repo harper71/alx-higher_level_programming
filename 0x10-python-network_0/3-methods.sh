@@ -1,3 +1,3 @@
 #!/bin/bash
 # uses the DELETE command
-curl -sX OPTION "$1"
+curl -sI | grep "Allow" | cut -d " " -f 2-
