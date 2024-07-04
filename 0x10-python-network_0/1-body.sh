@@ -1,3 +1,3 @@
 #!/bin/bash
 # uses the get command
-response="curl -X GET '$1'" && echo "$response"
+response=$(curl -s -o /dev/null -w "%{http_code}" "$URL") && echo "$response"
