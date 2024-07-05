@@ -1,4 +1,5 @@
-import urllib.request, urllib.parse
+import urllib.request
+import urllib.parse
 import sys
 """
 gets heade value
@@ -20,4 +21,3 @@ with urllib.request.urlopen(request) as response:
     print("\t- type:", type(body))
     print("\t- content:", body)
     print("\t- utf8 content:", body.decode('utf-8'))
-

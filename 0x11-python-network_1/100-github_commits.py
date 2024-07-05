@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-advanced task 
+advanced task
 """
 import requests
 import sys
